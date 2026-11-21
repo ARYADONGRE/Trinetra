@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Do not commit source datasets or generated processed datasets
+data/*
+!data/README.md
+*.csv
+*.tsv
+*.txt
+*.zip
+*.pkl
+*.parquet
+
+# Model weights and experiment outputs
+checkpoints/*
+results/*
+*.pth
+*.pt
+*.ckpt
+runs/
+logs/
+wandb/

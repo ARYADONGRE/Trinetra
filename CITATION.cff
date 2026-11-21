@@ -1,0 +1,5 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated TRINETRA study and the original Foursquare dataset paper."
+title: "TRINETRA: Spatio-Temporal Graph-Sequence Learning for Next POI Prediction"
+type: software
+# Add verified authors, release date, version, DOI, and repository URL before publication.
