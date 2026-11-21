@@ -158,7 +158,7 @@ The experiment parameters are defined near the beginning of `src/trinetra.py`.
 | Spatial KNN neighbours | 10 |
 | Embedding dimension | 128 |
 | Evaluation cut-offs | 1, 5, 10, 20 |
-| Random seeds | 42, 123, 2024, 7, 3407 |
+| Random seeds | As per wish |
 | Graph pre-training epochs | 400 |
 
 Do not change these values when attempting to reproduce the supplied configuration.

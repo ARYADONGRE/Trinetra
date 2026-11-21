@@ -15,7 +15,6 @@ data/*
 !data/README.md
 *.csv
 *.tsv
-*.txt
 *.zip
 *.pkl
 *.parquet
