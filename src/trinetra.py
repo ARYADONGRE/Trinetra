@@ -370,8 +370,17 @@ if not edge_list_trans:
 edge_index_trans = torch.tensor(edge_list_trans, dtype=torch.long).t().contiguous()
 
 # E. Geo Graph (KNN)
-nbrs = NearestNeighbors(n_neighbors=SPATIAL_K+1, algorithm='ball_tree').fit(valid_coords)
-_, indices = nbrs.kneighbors(valid_coords)
+# nbrs = NearestNeighbors(n_neighbors=SPATIAL_K+1, algorithm='ball_tree').fit(valid_coords)
+# _, indices = nbrs.kneighbors(valid_coords)
+coords_rad = np.radians(valid_coords)
+
+nbrs = NearestNeighbors(
+    n_neighbors=SPATIAL_K + 1,
+    algorithm='ball_tree',
+    metric='haversine'
+).fit(coords_rad)
+
+_, indices = nbrs.kneighbors(coords_rad)
 edge_list_geo = []
 for i in range(len(valid_coords)):
     src_id = i + 1
